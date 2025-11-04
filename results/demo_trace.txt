@@ -1,0 +1,47 @@
+======================================================================
+HANGMAN DEMO - STEP BY STEP
+======================================================================
+Target length: 8  (word will be revealed at the end)
+
+[Step 1]
+Masked: ________   Guessed: {}   Remaining: 6
+HMM top-8: E:0.109  A:0.093  I:0.084  R:0.072  O:0.069  N:0.066  T:0.062  L:0.060
+Agent action: E
+Outcome: MISS   Reward: -10   Wrong now: 1 (+1)
+
+[Step 2]
+Masked: ________   Guessed: {E}   Remaining: 5
+HMM top-8: A:0.116  I:0.109  O:0.093  N:0.072  R:0.064  L:0.063  T:0.062  S:0.060
+Agent action: A
+Outcome: HIT   Reward: 10   Wrong now: 1 (+0)
+
+[Step 3]
+Masked: _A___A__   Guessed: {AE}   Remaining: 5
+HMM top-8: N:0.107  L:0.107  I:0.077  R:0.077  D:0.073  S:0.064  K:0.056  T:0.051
+Agent action: N
+Outcome: HIT   Reward: 10   Wrong now: 1 (+0)
+
+[Step 4]
+Masked: _ANN_A__   Guessed: {AEN}   Remaining: 5
+HMM top-8: S:0.500  Y:0.250  I:0.250
+Agent action: S
+Outcome: HIT   Reward: 10   Wrong now: 1 (+0)
+
+[Step 5]
+Masked: SANN_AS_   Guessed: {AENS}   Remaining: 5
+HMM top-8: Y:0.500  I:0.500
+Agent action: Y
+Outcome: HIT   Reward: 10   Wrong now: 1 (+0)
+
+[Step 6]
+Masked: SANNYAS_   Guessed: {AENSY}   Remaining: 5
+HMM top-8: I:1.000
+Agent action: I
+Outcome: HIT   Reward: 100   Wrong now: 1 (+0)
+
+======================================================================
+GAME OVER
+Revealed word: SANNYASI
+Final masked:  SANNYASI
+Won: True  Wrong guesses: 1
+======================================================================
